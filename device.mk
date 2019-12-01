@@ -119,7 +119,15 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
+<<<<<<< HEAD
     android.hardware.camera.provider@2.4-service
+=======
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5 \
+    libstdc++.vendor_32 \
+    Snap \
+    vendor.qti.hardware.camera.device@1.0
+>>>>>>> a6ba89a0 (RMX1801: vndk: Enable runtime isolation)
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
@@ -417,11 +425,20 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service
 
 # VNDK
+<<<<<<< HEAD
 PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
+=======
+PRODUCT_PACKAGES += \
+    vndk-ext \
+    com.android.vndk.current.on_vendor
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
+>>>>>>> a6ba89a0 (RMX1801: vndk: Enable runtime isolation)
 
 # WiFi
 PRODUCT_PACKAGES += \
