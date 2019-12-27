@@ -405,7 +405,11 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
-# Wifi
+# VNDK-SP
+PRODUCT_PACKAGES += \
+    vndk-sp
+
+# WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
