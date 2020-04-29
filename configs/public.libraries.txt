@@ -7,3 +7,7 @@ liblistenjni.so
 liblistensoundmodel2.so
 libOpenCL.so
 libnpu.so
+libdiag.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so
+
