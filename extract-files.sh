@@ -62,6 +62,8 @@ function blob_fixup() {
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
             "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
+        product/lib64/libdpmframework.so)
+            "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
             ;;
     esac
 }
