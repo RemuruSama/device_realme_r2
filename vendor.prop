@@ -1,4 +1,4 @@
-# Audio
+# Audio 
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
@@ -194,6 +194,9 @@ sys.vendor.shutdown.waittime=500
 
 # Skip_validate
 sdm.debug.disable_skip_validate=1
+
+# Set system properties identifying the chipset
+ro.soc.manufacturer=QTI
 
 # Time
 persist.timed.enable=true
