@@ -544,6 +544,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
+<<<<<<< HEAD
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
@@ -558,6 +559,41 @@ SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/msm8996
+=======
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_cfg_cmcc.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg_cmcc.ini \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051AA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051AA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051CA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051CA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051EA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051EA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051GA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051GA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051JA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051JA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051RA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051RA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_h_S88051SA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_h_S88051SA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051AA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051AA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051CA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051CA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051EA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051EA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051GA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051GA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051JA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051JA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051RA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051RA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_l_S88051SA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_l_S88051SA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051AA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051AA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051CA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051CA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051EA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051EA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051GA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051GA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051JA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051JA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051RA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051RA1.bin \
+    $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv_m_S88051SA1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_m_S88051SA1.bin \
+    $(DEVICE_PATH)/configs/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
+    $(DEVICE_PATH)/configs/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
+    $(DEVICE_PATH)/configs/wifi/fstman.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/fstman.ini \
+    $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(DEVICE_PATH)/configs/wifi/wigig_p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wigig_p2p_supplicant.conf \
+    $(DEVICE_PATH)/configs/wifi/wigig_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wigig_supplicant.conf \
+    $(DEVICE_PATH)/configs/wifi/wlan_nv.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wlan_nv.conf \
+    $(DEVICE_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
+    $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+>>>>>>> 36a16d8 (RMX1805: Import stock WiFi configs)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oppo/RMX1805/RMX1805-vendor.mk)
