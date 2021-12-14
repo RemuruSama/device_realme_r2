@@ -65,6 +65,18 @@ function blob_fixup() {
         product/lib64/libdpmframework.so)
             "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
             ;;
+        vendor/lib/hw/camera.msm8953.so)
+            "${PATCHELF}" --add-needed "libcamera_msm8953_shim.so" "${2}"
+            ;;
+        vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            ;;
+        vendor/lib64/libsettings.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+            ;;
+        vendor/lib64/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            ;;
     esac
 }
 
