@@ -62,10 +62,17 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
+    android.hardware.soundtrigger@2.1 \
+    android.hardware.soundtrigger@2.2 \
+    android.hardware.soundtrigger@2.3 \
+    android.hardware.soundtrigger@2.1.vendor \
+    android.hardware.soundtrigger@2.2.vendor \
+    android.hardware.soundtrigger@2.3.vendor \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.soundtrigger@2.1-impl
+    android.hardware.bluetooth.audio@2.0-impl
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor
