@@ -218,6 +218,12 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# GPS
+PRODUCT_PACKAGES += \
+     android.hardware.gnss@1.0.vendor \
+     android.hardware.gnss@1.0-impl-qti \
+     android.hardware.gnss@1.0-service-qti
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
