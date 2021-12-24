@@ -86,7 +86,9 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     libvolumelistener \
-    libtinycompress
+    libtinycompress \
+    libalsautils \
+    libnbaio_mono
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
