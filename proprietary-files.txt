@@ -1712,6 +1712,37 @@ vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 vendor/lib64/liblistenjni.so
 vendor/lib64/liblistensoundmodel2.so
+# Media - from T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+lib/libFileMux.so|4e05cd5e9913311ad17543d204adcd6d60cc8754
+lib/libOmxMux.so|033f86f26c34c4ec715ee65b1a2cfbef467a1e61
+system_ext/lib/extractors/libmmparserextractor.so|1902f82487e88250aa53e4f7c82c785941488ca7
+system_ext/lib/libavenhancements.so|ab02d5ed827c9e9db51050ba10d31171d7c8beb7
+system_ext/lib/libmmosal.so|8c7f0a071f84ec2ac9522bf448cb902a3ece2405
+system_ext/lib/libmmparser_lite.so|f7ed21ea0de0de02741854d78518c977ef5763f5
+system_ext/lib64/libavenhancements.so|6f2387c39edf9deb35312a9dfda2fbf6af29560f
+system_ext/lib64/libmmosal.so|ef19a38be8283c87eabe96f74bc8a71881ab1f0a
+vendor/etc/seccomp_policy/mediacodec.policy|f1097f8e67ef20de89176cf2e9c4f5c91cb77897
+vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
+vendor/lib/libFlacSwDec.so|7d661ac115de794bc6f6f7d20d4f93735b698c52
+vendor/lib/libOmxAacDec.so|0b86603691cb574700e9a5eb105bd20ed0d3531d
+vendor/lib/libOmxAlacDec.so|d1018f8b62c7ded2b6f52660d7c8c1e4f9374c74
+vendor/lib/libOmxAlacDecSw.so|59055e1c00ed82f7c310dcf78d4104b9f803d12e
+vendor/lib/libOmxAmrDec.so|41697c01dc9f7840e158a86f771fe353daeb85df
+vendor/lib/libOmxAmrwbplusDec.so|3200103c63b670b66c5ce7498281b8ff428929b9
+vendor/lib/libOmxApeDec.so|ad9ee27ade3c5aa27d406b6208c60aefc6a07c68
+vendor/lib/libOmxApeDecSw.so|076e4092433cf2422c71594c7f4a418f32408f56
+vendor/lib/libOmxDsdDec.so|b8697801e414e51ea488505bb4b94567e882585d
+vendor/lib/libOmxEvrcDec.so|99202c934d1fdd1e428527019b7dc92dde40edc6
+vendor/lib/libOmxG711Dec.so|2c7bbd69d38c5a9edd5cc159d754d1f1909e503b
+vendor/lib/libOmxQcelp13Dec.so|4424762bcf639284112395b4c9d63cb58c799638
+vendor/lib/libOmxVideoDSMode.so|71c4f23de93e91931c077ed511301185152422da
+vendor/lib/libOmxVpp.so|2785621219cd2c70af4d953955bb1aea860f8cb8
+vendor/lib/libOmxWmaDec.so|64cd394b68d131e7e9fe1a4d525a37faac415e59
+vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
+vendor/lib/libvpplibrary.so|125902f654caf28ab2a4174a88358e676ef396ec
+vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
+vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
+vendor/lib64/libvpplibrary.so|6044302aa2514849ef90fb9adf917bde12dfc413
 
 # Media
 product/lib/vendor.qti.hardware.vpp@1.2.so
