@@ -138,11 +138,8 @@ TARGET_USES_INTERACTION_BOOST := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-<<<<<<< HEAD
 #OVERRIDE_QCOM_HARDWARE_VARIANT := msm8996-LA.UM.9.6.2.r1-04100-89xx.0
-=======
 TARGET_BOARD_PLATFORM := msm8953
->>>>>>> 1c1f98c (G: prepare to move to in-tree HALs)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
@@ -181,5 +178,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/oppo/RMX1805/BoardConfigVendor.mk
-include vendor/oppo/msm8953-common/BoardConfigVendor.mk
-

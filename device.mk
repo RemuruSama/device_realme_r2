@@ -429,4 +429,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oppo/RMX1805/RMX1805-vendor.mk)
-$(call inherit-product, vendor/oppo/msm8953-common/msm8953-common-vendor.mk)

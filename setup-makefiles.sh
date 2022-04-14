@@ -10,7 +10,6 @@ set -e
 
 # Required!
 export DEVICE=RMX1805
-export DEVICE_COMMON=msm8953-common
 export VENDOR=oppo
 
 INITIAL_COPYRIGHT_YEAR=2018
@@ -32,7 +31,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "daisy mido sakura tissot vince ysl"
+write_headers "RMX1805"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
