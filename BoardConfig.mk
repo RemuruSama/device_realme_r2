@@ -173,6 +173,9 @@ BOARD_VNDK_VERSION := current
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-01-05
+
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
