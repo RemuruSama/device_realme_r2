@@ -197,6 +197,7 @@ sdm.debug.disable_skip_validate=1
 
 # Set system properties identifying the chipset
 ro.soc.manufacturer=QTI
+ro.soc.model=MSM8953
 
 # Time
 persist.timed.enable=true
