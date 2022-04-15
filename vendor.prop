@@ -45,6 +45,9 @@ bluetooth.hfp.client=1
 persist.vendor.btstack.enable.splita2dp=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
+# Bpf
+ro.kernel.ebpf.supported=false
+
 # CNE
 persist.vendor.cne.feature=1
 
