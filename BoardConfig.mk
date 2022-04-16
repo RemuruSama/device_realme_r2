@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/oppo/RMX1805
 
+# Assertions
+TARGET_OTA_ASSERT_DEVICE := RMX1805,RMX1809,RMX1811
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -18,6 +21,7 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -28,14 +32,14 @@ BUILD_BROKEN_PREBUILT_ELF_FILES := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78af000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true loop.max_part=7
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_KERNEL_SOURCE := kernel/oppo/RMX1805
 TARGET_KERNEL_VERSION := 4.9
-TARGET_KERNEL_CONFIG := RMX1805_defconfig
+TARGET_KERNEL_CONFIG := msm8953-perf_defconfig
 
 TARGET_FORCE_PREBUILT_KERNEL := true
 

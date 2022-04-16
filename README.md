@@ -1,5 +1,3 @@
-## Realme 2 & C1 
-
 The Realme 2 (codenamed _"RMX1805"_) is a budget smartphone from Realme announced in August 2018.
 
 ## Device specifications
