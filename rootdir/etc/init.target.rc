@@ -535,3 +535,30 @@ on property:sys.oppo.disable_vooc=true
 on property:sys.oppo.disable_vooc=false
     write sys/class/power_supply/battery/call_mode 0
 #endif /* ODM_WT_EDIT */
+
+# Logcat Services
+service boot_log /system/bin/logcat -b all -D -f /cache/boot_log_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_crash /system/bin/logcat -b crash -D -f /cache/boot_log_crash.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+# Clear existing log and start the service
+    rm /cache/boot_log_full.txt
+    rm /cache/boot_log_crash.txt
+    start boot_log
+    start boot_log_crash
+
+on property:sys.boot_completed=1
+# Stop the logger service
+    stop boot_log
+    stop boot_log_crash
