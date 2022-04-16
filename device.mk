@@ -119,15 +119,12 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-<<<<<<< HEAD
-    android.hardware.camera.provider@2.4-service
-=======
+    android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     libstdc++.vendor_32 \
     Snap \
     vendor.qti.hardware.camera.device@1.0
->>>>>>> a6ba89a0 (RMX1801: vndk: Enable runtime isolation)
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
@@ -327,6 +324,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.msm.usb.configfs.rc \
+    init oppo rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -334,7 +332,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.sh \
-    init.qcom.bt.sh \
+    init.qcom.sensors.sh \
+    init.qcom.usb.sh \
+    init.qti.qseecomd.sh \
+    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh
 
 # RenderScript
@@ -425,20 +426,15 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service
 
 # VNDK
-<<<<<<< HEAD
 PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-=======
+# VNDK-ext
 PRODUCT_PACKAGES += \
     vndk-ext \
     com.android.vndk.current.on_vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
->>>>>>> a6ba89a0 (RMX1801: vndk: Enable runtime isolation)
 
 # WiFi
 PRODUCT_PACKAGES += \
