@@ -1,10 +1,10 @@
-## Common MSM8953
+## Realme 2 & C1 
 
 The Realme 2 (codenamed _"RMX1805"_) is a budget smartphone from Realme announced in August 2018.
 
 ## Device specifications
 
-| Device                  | Realme 2                                                    |
+| Basic                   | Specifications sheet                                        |
 | ----------------------- | :---------------------------------------------------------- |
 | Chipset                 | Qualcomm™ Snapdragon 450 octa-core processor                 |
 | CPU                     | 8x ARM Cortex A53, 1.8GHz                                   |
