@@ -24,7 +24,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
 
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -241,10 +240,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.RMX1805
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
