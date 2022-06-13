@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
-   Copyright (c) 2019, The LineageOS Project
+   Copyright (c) 2019-2021, The LineageOS Project
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -33,15 +33,15 @@
 #include <string.h>
 #include <sys/sysinfo.h>
 #include <unistd.h>
-
+#include <stdlib.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
 #include "property_service.h"
+#include "vendor_init.h"
 
-using android::base::GetProperty;
+using ::android::base::SetProperty;
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -49,17 +49,6 @@ char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
 char const *heaptargetutilization;
-
-void property_override(char const prop[], char const value[], bool add = true)
-{
-    auto pi = (prop_info *) __system_property_find(prop);
-
-    if (pi != nullptr) {
-        __system_property_update(pi, value, strlen(value));
-    } else if (add) {
-        __system_property_add(prop, strlen(prop), value, strlen(value));
-    }
-}
 
 void check_device()
 {
@@ -78,7 +67,7 @@ void check_device()
     } else if (sys.totalram > 3072ull * 1024 * 1024) {
         // from - phone-xxhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
-        heapgrowthlimit = "256m";
+        heapgrowthlimit = "192m";
         heapsize = "512m";
         heaptargetutilization = "0.6";
         heapminfree = "8m";
@@ -94,10 +83,28 @@ void check_device()
     }
 }
 
+void property_override(char const prop[], char const value[], bool add = true)
+{
+    auto pi = (prop_info *) __system_property_find(prop);
+
+    if (pi != nullptr) {
+        __system_property_update(pi, value, strlen(value));
+    } else if (add) {
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
+}
+
+void property_override_dual(char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
+
 void vendor_load_properties()
 {
+    // dalvik
     check_device();
-
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
     property_override("dalvik.vm.heapsize", heapsize);
