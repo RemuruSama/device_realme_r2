@@ -18,6 +18,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.RMX1805",
     init_rc: ["android.hardware.light@2.0-service.RMX1805.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.RMX1805.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     vendor: true,
     shared_libs: [
