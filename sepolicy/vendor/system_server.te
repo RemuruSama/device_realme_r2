@@ -1,12 +1,18 @@
-# Input devices
-r_dir_file(system_server, vendor_idc_file);
-r_dir_file(system_server, vendor_keylayout_file);
+binder_call(system_server,rild);
 
-#Smart charging
-allow system_server sysfs_battery_supply:file { getattr open read write };
+allow system_server sysfs_vibrator:file read;
+allow system_server fpc_extension_service:hwservice_manager find;
+allow system_server vendor_keylayout_file:dir r_dir_perms;
+allow system_server vendor_keylayout_file:file r_file_perms;
+allow system_server vendor_idc_file:dir r_dir_perms;
+allow system_server vendor_idc_file:file r_file_perms;
+allow system_server sysfs_homebutton:file rw_file_perms;
+allow system_server sysfs_homebutton:dir r_dir_perms;
 
-get_prop(system_server, exported_camera_prop);
-get_prop(system_server, userspace_reboot_exported_prop);
-get_prop(system_server, userspace_reboot_config_prop);
+# MotSpeakerHelperProximity
+binder_call(system_server, hal_audio_default)
 
-allow system_server vendor_file:file { getattr open read };
+get_prop(system_server, userspace_reboot_config_prop)
+get_prop(system_server, userspace_reboot_exported_prop)
+
+get_prop(system_server, exported_camera_prop)

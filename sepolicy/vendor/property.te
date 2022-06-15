@@ -1,8 +1,5 @@
-# Dirac
-system_public_prop(dirac_prop)
-
-# Fingerprint
-system_public_prop(vendor_fp_prop)
-
-# Power HAL
-system_public_prop(power_prop)
+type power_prop, property_type;
+type moto_boot_prop, property_type;
+type vendor_aov_prop, property_type;
+type vendor_dolby_loglevel_prop, property_type;
+type hwrev_prop, property_type;
